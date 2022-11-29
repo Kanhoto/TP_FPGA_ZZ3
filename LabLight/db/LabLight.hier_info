@@ -1,0 +1,9 @@
+|LabLight
+A_i[4] => S_o.IN1
+A_i[3] => C_s[3].IN1
+A_i[2] => C_s[2].IN1
+A_i[1] => C_s[1].IN0
+A_i[0] => C_s[1].IN1
+S_o <= S_o.DB_MAX_OUTPUT_PORT_TYPE
+
+

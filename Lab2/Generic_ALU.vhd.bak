@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity Generic_ALU is
+generic(n: integer:=7);
+port(
+	A_i, B_i : in std_logic_vector(n-1 downto 0);
+	sel_i : in std_logic_vector(3 downto 0);
+	S_o : buffer std_logic_vector(n-1 downto 0);
+	null_o, even_o, overflow_o : out std_logic
+);
+end Generic_ALU;
+
+-- Generic Artihmetic Logic Unit
+-- Take 2 input and a selection input
+-- Give a result with 3 flags
+
+architecture Arithmetic of Generic_ALU is
+signal C_s:std_logic_vector(n downto 0);
+signal A_s:std_logic_vector(n downto 0);
+signal B_s:std_logic_vector(n downto 0);
+begin
+	-- We're adding one extra MSB bit in case the operation A+B overflow
+	A_s <= '0' & A_i;
+	B_s <= '0' & B_i;
+	
+	-- For each select commands
+	with sel_i select
+		C_s <=  A_s + B_i when X"0", -- adder
+				A_s when X"1", -- A
+				A_s + 1 when X"2", -- increment
+				"01" & A_i(n-1 downto 1) when X"3", -- shift right
+				"0" & A_i(n-2 downto 0) & "0" when X"4", -- shift left
+				A_s and B_s when X"5", -- and
+				A_s or B_s when X"6", -- or
+				A_s xor B_s when X"7", -- xor
+				"0" & not(A_i) when X"8", -- not A
+				B_s when others; -- B
+				
+	-- Settings the 3 flags null, even and overflow
+	S_o <= C_s(n-1 downto 0);
+	null_o <= '1' when C_s(n-1 downto 0) = 0 else
+			  '0';
+	even_o <= not C_s(0);
+	overflow_o <= C_s(n);
+end Arithmetic;

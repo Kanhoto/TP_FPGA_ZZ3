@@ -1,0 +1,247 @@
+Quartus II 64-Bit
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Decoder_7_Segment
+# storage
+db|Lab3.(4).cnf
+db|Lab3.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|lab1|decoder_7_segment.vhd
+ae112562c836d26e3792f7a3614ebc7e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(e_i)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(seg_o)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Decoder_7_Segment:Decode_secondes_unit
+Decoder_7_Segment:Decode_secondes_dozen
+Decoder_7_Segment:Decode_minutes_unit
+Decoder_7_Segment:Decode_minutes_dozen
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Generic_counter
+# storage
+db|Lab3.(1).cnf
+db|Lab3.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+generic_counter.vhd
+f9a251e56211b373b4b22ec61b2759
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n_gen
+50000000
+PARAMETER_SIGNED_DEC
+USR
+ constraint(s_o)
+26 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Generic_counter:Counter_HZ
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Generic_counter
+# storage
+db|Lab3.(2).cnf
+db|Lab3.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+generic_counter.vhd
+f9a251e56211b373b4b22ec61b2759
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n_gen
+60
+PARAMETER_SIGNED_DEC
+USR
+ constraint(s_o)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Generic_counter:Counter_secondes
+Generic_counter:Counter_minutes
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Chronometer
+# storage
+db|Lab3.(0).cnf
+db|Lab3.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+chronometer.vhd
+38886f2fac5e23c5cd3253cbd29d88a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n_chrono
+50000000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Double_dabble_seq
+# storage
+db|Lab3.(3).cnf
+db|Lab3.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+double_dabble_seq.vhd
+3a39739ec0c7f0139ea5fc90ed17aae1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n_dab
+6
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a_i)
+6 downto 0
+PARAMETER_STRING
+USR
+ constraint(ones_o)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(tens_o)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Double_dabble_seq:dabble_secondes
+Double_dabble_seq:dabble_minutes
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

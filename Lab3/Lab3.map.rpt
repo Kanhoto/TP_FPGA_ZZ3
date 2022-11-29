@@ -1,0 +1,426 @@
+Analysis & Synthesis report for Lab3
+Tue Nov 29 15:34:43 2022
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |Chronometer
+ 13. Parameter Settings for User Entity Instance: Generic_counter:Counter_HZ
+ 14. Parameter Settings for User Entity Instance: Generic_counter:Counter_secondes
+ 15. Parameter Settings for User Entity Instance: Generic_counter:Counter_minutes
+ 16. Parameter Settings for User Entity Instance: Double_dabble_seq:dabble_secondes
+ 17. Parameter Settings for User Entity Instance: Double_dabble_seq:dabble_minutes
+ 18. Port Connectivity Checks: "Generic_counter:Counter_minutes"
+ 19. Port Connectivity Checks: "Generic_counter:Counter_HZ"
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 29 15:34:43 2022         ;
+; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Revision Name                      ; Lab3                                          ;
+; Top-level Entity Name              ; Chronometer                                   ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 177                                           ;
+;     Total combinational functions  ; 177                                           ;
+;     Dedicated logic registers      ; 98                                            ;
+; Total registers                    ; 98                                            ;
+; Total pins                         ; 31                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Chronometer        ; Lab3               ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path  ;
++----------------------------------+-----------------+-----------------+-------------------------------+
+; ../Lab1/Decoder_7_Segment.vhd    ; yes             ; User VHDL File  ; M:/Lab1/Decoder_7_Segment.vhd ;
+; Chronometer.vhd                  ; yes             ; User VHDL File  ; M:/Lab3/Chronometer.vhd       ;
+; Generic_counter.vhd              ; yes             ; User VHDL File  ; M:/Lab3/Generic_counter.vhd   ;
+; Double_dabble_seq.vhd            ; yes             ; User VHDL File  ; M:/Lab3/Double_dabble_seq.vhd ;
++----------------------------------+-----------------+-----------------+-------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 177   ;
+;                                             ;       ;
+; Total combinational functions               ; 177   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 95    ;
+;     -- 3 input functions                    ; 31    ;
+;     -- <=2 input functions                  ; 51    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 139   ;
+;     -- arithmetic mode                      ; 38    ;
+;                                             ;       ;
+; Total registers                             ; 98    ;
+;     -- Dedicated logic registers            ; 98    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 31    ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 111   ;
+; Total fan-out                               ; 934   ;
+; Average fan-out                             ; 3.05  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; |Chronometer                                 ; 177 (0)           ; 98 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |Chronometer                                         ; work         ;
+;    |Decoder_7_Segment:Decode_minutes_dozen|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Decoder_7_Segment:Decode_minutes_dozen  ;              ;
+;    |Decoder_7_Segment:Decode_minutes_unit|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Decoder_7_Segment:Decode_minutes_unit   ;              ;
+;    |Decoder_7_Segment:Decode_secondes_dozen| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Decoder_7_Segment:Decode_secondes_dozen ;              ;
+;    |Decoder_7_Segment:Decode_secondes_unit|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Decoder_7_Segment:Decode_secondes_unit  ;              ;
+;    |Double_dabble_seq:dabble_minutes|        ; 40 (40)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Double_dabble_seq:dabble_minutes        ;              ;
+;    |Double_dabble_seq:dabble_secondes|       ; 45 (45)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Double_dabble_seq:dabble_secondes       ;              ;
+;    |Generic_counter:Counter_HZ|              ; 40 (40)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Generic_counter:Counter_HZ              ;              ;
+;    |Generic_counter:Counter_minutes|         ; 12 (12)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Generic_counter:Counter_minutes         ;              ;
+;    |Generic_counter:Counter_secondes|        ; 12 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|Generic_counter:Counter_secondes        ;              ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++----------------------------------------------+---------------------------------------------------------+
+; Register name                                ; Reason for Removal                                      ;
++----------------------------------------------+---------------------------------------------------------+
+; Generic_counter:Counter_minutes|S_o[6]       ; Merged with Generic_counter:Counter_minutes|inc_v[6]    ;
+; Generic_counter:Counter_minutes|S_o[5]       ; Merged with Generic_counter:Counter_minutes|inc_v[5]    ;
+; Generic_counter:Counter_minutes|S_o[4]       ; Merged with Generic_counter:Counter_minutes|inc_v[4]    ;
+; Generic_counter:Counter_minutes|S_o[3]       ; Merged with Generic_counter:Counter_minutes|inc_v[3]    ;
+; Generic_counter:Counter_minutes|S_o[2]       ; Merged with Generic_counter:Counter_minutes|inc_v[2]    ;
+; Generic_counter:Counter_minutes|S_o[1]       ; Merged with Generic_counter:Counter_minutes|inc_v[1]    ;
+; Generic_counter:Counter_minutes|S_o[0]       ; Merged with Generic_counter:Counter_minutes|inc_v[0]    ;
+; Generic_counter:Counter_secondes|S_o[6]      ; Merged with Generic_counter:Counter_secondes|inc_v[6]   ;
+; Generic_counter:Counter_secondes|S_o[5]      ; Merged with Generic_counter:Counter_secondes|inc_v[5]   ;
+; Generic_counter:Counter_secondes|S_o[4]      ; Merged with Generic_counter:Counter_secondes|inc_v[4]   ;
+; Generic_counter:Counter_secondes|S_o[3]      ; Merged with Generic_counter:Counter_secondes|inc_v[3]   ;
+; Generic_counter:Counter_secondes|S_o[2]      ; Merged with Generic_counter:Counter_secondes|inc_v[2]   ;
+; Generic_counter:Counter_secondes|S_o[1]      ; Merged with Generic_counter:Counter_secondes|inc_v[1]   ;
+; Generic_counter:Counter_secondes|S_o[0]      ; Merged with Generic_counter:Counter_secondes|inc_v[0]   ;
+; Double_dabble_seq:dabble_secondes|count_v[2] ; Merged with Double_dabble_seq:dabble_minutes|count_v[2] ;
+; Double_dabble_seq:dabble_secondes|count_v[1] ; Merged with Double_dabble_seq:dabble_minutes|count_v[1] ;
+; Double_dabble_seq:dabble_secondes|count_v[0] ; Merged with Double_dabble_seq:dabble_minutes|count_v[0] ;
+; Total Number of Removed Registers = 17       ;                                                         ;
++----------------------------------------------+---------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 41    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 79    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; Generic_counter:Counter_secondes|enable_v ; 1       ;
+; Generic_counter:Counter_minutes|enable_v  ; 1       ;
+; Generic_counter:Counter_HZ|enable_v       ; 1       ;
+; Total number of inverted registers = 3    ;         ;
++-------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Chronometer|Double_dabble_seq:dabble_secondes|tens_v ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Chronometer|Double_dabble_seq:dabble_minutes|tens_v  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Chronometer ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; n_chrono       ; 50000000 ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Generic_counter:Counter_HZ ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; n_gen          ; 50000000 ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Generic_counter:Counter_secondes ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n_gen          ; 60    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Generic_counter:Counter_minutes ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n_gen          ; 60    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Double_dabble_seq:dabble_secondes ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n_dab          ; 6     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Double_dabble_seq:dabble_minutes ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n_dab          ; 6     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Generic_counter:Counter_minutes"                                                            ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; dividedclk_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Generic_counter:Counter_HZ"                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Tue Nov 29 15:34:41 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 2 design units, including 1 entities, in source file double_dabble.vhd
+    Info: Found design unit 1: Double_dabble-dabble
+    Info: Found entity 1: Double_dabble
+Info: Found 2 design units, including 1 entities, in source file /lab1/decoder_7_segment.vhd
+    Info: Found design unit 1: Decoder_7_segment-DECODER
+    Info: Found entity 1: Decoder_7_Segment
+Info: Found 2 design units, including 1 entities, in source file chronometer.vhd
+    Info: Found design unit 1: Chronometer-Chrono
+    Info: Found entity 1: Chronometer
+Info: Found 2 design units, including 1 entities, in source file generic_counter.vhd
+    Info: Found design unit 1: Generic_counter-counter
+    Info: Found entity 1: Generic_counter
+Info: Found 2 design units, including 1 entities, in source file double_dabble_seq.vhd
+    Info: Found design unit 1: Double_dabble_seq-dabble
+    Info: Found entity 1: Double_dabble_seq
+Info: Elaborating entity "Chronometer" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Chronometer.vhd(21): object "divClk_hours_s" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Chronometer.vhd(24): object "S_hz_s" assigned a value but never read
+Info: Elaborating entity "Generic_counter" for hierarchy "Generic_counter:Counter_HZ"
+Info: Elaborating entity "Generic_counter" for hierarchy "Generic_counter:Counter_secondes"
+Info: Elaborating entity "Double_dabble_seq" for hierarchy "Double_dabble_seq:dabble_secondes"
+Info: Elaborating entity "Decoder_7_Segment" for hierarchy "Decoder_7_Segment:Decode_secondes_unit"
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[6]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[6]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[6]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[6]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[6]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[6]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[5]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[5]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[5]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[5]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[5]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[5]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[4]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[4]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[4]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[4]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[4]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[4]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[3]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[3]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[3]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[3]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[3]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[3]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[2]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[2]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[2]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[2]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[2]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[2]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[1]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[1]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[1]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[1]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[1]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[1]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_secondes|a_v[0]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_secondes|a_v[0]~_emulated" and latch "Double_dabble_seq:dabble_secondes|a_v[0]~latch"
+    Warning (13310): Register "Double_dabble_seq:dabble_minutes|a_v[0]" is converted into an equivalent circuit using register "Double_dabble_seq:dabble_minutes|a_v[0]~_emulated" and latch "Double_dabble_seq:dabble_minutes|a_v[0]~latch"
+Info: Implemented 215 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 28 output pins
+    Info: Implemented 184 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4456 megabytes
+    Info: Processing ended: Tue Nov 29 15:34:43 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

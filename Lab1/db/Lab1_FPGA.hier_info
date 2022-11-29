@@ -1,0 +1,54 @@
+|Lab1_FPGA
+out <= in.DB_MAX_OUTPUT_PORT_TYPE
+in => out.DATAIN
+OutputSeg[0] <= Decoder_7_Segment:inst.seg_o[0]
+OutputSeg[1] <= Decoder_7_Segment:inst.seg_o[1]
+OutputSeg[2] <= Decoder_7_Segment:inst.seg_o[2]
+OutputSeg[3] <= Decoder_7_Segment:inst.seg_o[3]
+OutputSeg[4] <= Decoder_7_Segment:inst.seg_o[4]
+OutputSeg[5] <= Decoder_7_Segment:inst.seg_o[5]
+OutputSeg[6] <= Decoder_7_Segment:inst.seg_o[6]
+InputSeg[0] => Decoder_7_Segment:inst.e_i[0]
+InputSeg[1] => Decoder_7_Segment:inst.e_i[1]
+InputSeg[2] => Decoder_7_Segment:inst.e_i[2]
+InputSeg[3] => Decoder_7_Segment:inst.e_i[3]
+
+
+|Lab1_FPGA|Decoder_7_Segment:inst
+e_i[0] => Mux0.IN19
+e_i[0] => Mux1.IN19
+e_i[0] => Mux2.IN19
+e_i[0] => Mux3.IN19
+e_i[0] => Mux4.IN19
+e_i[0] => Mux5.IN19
+e_i[0] => Mux6.IN19
+e_i[1] => Mux0.IN18
+e_i[1] => Mux1.IN18
+e_i[1] => Mux2.IN18
+e_i[1] => Mux3.IN18
+e_i[1] => Mux4.IN18
+e_i[1] => Mux5.IN18
+e_i[1] => Mux6.IN18
+e_i[2] => Mux0.IN17
+e_i[2] => Mux1.IN17
+e_i[2] => Mux2.IN17
+e_i[2] => Mux3.IN17
+e_i[2] => Mux4.IN17
+e_i[2] => Mux5.IN17
+e_i[2] => Mux6.IN17
+e_i[3] => Mux0.IN16
+e_i[3] => Mux1.IN16
+e_i[3] => Mux2.IN16
+e_i[3] => Mux3.IN16
+e_i[3] => Mux4.IN16
+e_i[3] => Mux5.IN16
+e_i[3] => Mux6.IN16
+seg_o[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
