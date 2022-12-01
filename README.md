@@ -8,6 +8,7 @@ These four projects have been made using Quartus pro v9.1 and using an Altera FP
 ### Combinatory VHDL
 
 ![7Segment](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/7_Segment_Display_with_Labeled_Segments.svg/150px-7_Segment_Display_with_Labeled_Segments.svg.png)
+
 Component to convert a 4 bits HEX input into a 7 bits output to display HEX value onto a 7 segment display. 
 
 *ps : (We don't have the DP dot on our board).*
@@ -23,6 +24,7 @@ Component using **FOR loop** to chain n-1 AND_2bits gates to make a AND_Nbits ga
 ### Combinatory VHDL
 
 ![enter image description here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUAmzlgQ_5kUDDyjs610mmzCY0Z5fwOx2sKDwg2QD6iGT41u-i5sZqHF4ctMnMTWx7dQ&usqp=CAU)
+
 Component to make different operations on N bits inputs. This ALU have 9 operations depending on select commands input.
 
 |Select value| Operation |
