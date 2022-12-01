@@ -74,7 +74,7 @@ begin
 	-- count 60 seconds to rise every minutes
 	Counter_secondes : Generic_counter generic map(60) port map(divClk_secondes_s, reset, start_stop, S_secondes_s, divClk_minutes_s);
 	
-	-- count 60 minutes to rise rise every hours
+	-- count 60 minutes to rise every hours
 	Counter_minutes : Generic_counter generic map(60) port map(divClk_minutes_s, reset, start_stop, S_minutes_s, divClk_hours_s);
 	
 	-- Convert binary value of seconds to BCD
