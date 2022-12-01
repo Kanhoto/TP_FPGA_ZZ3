@@ -55,6 +55,6 @@ For our board, the frequency is 50MHz, so we use three counter to make a chronom
 
 Just that is good enough, but we wanted to display it on a 7 segments display. So we wanted to use Lab 1 Component. But it display HEX values, not decimal values.
 
-To make it work, we use the **Double dabble** algorithm. This algorithm can be made generic, but for this one, I just wanted to convert seconds and minutes so I didn't a generic one.
+To make it work, we use the **Double dabble** algorithm. This algorithm can be made generic, but for this one, I just wanted to convert seconds and minutes so I did a 8 bits double dabble.
 
 > Good challenge if you want to improve it (\^~^)
