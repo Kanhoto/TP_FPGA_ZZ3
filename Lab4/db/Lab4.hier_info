@@ -1,0 +1,38 @@
+|Divider
+cmd_mux => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+Dividend[0] => ~NO_FANOUT~
+Dividend[1] => ~NO_FANOUT~
+Dividend[2] => ~NO_FANOUT~
+Dividend[3] => ~NO_FANOUT~
+Dividend[4] => ~NO_FANOUT~
+Dividend[5] => ~NO_FANOUT~
+Dividend[6] => ~NO_FANOUT~
+Dividend[7] => ~NO_FANOUT~
+Divisor[0] => ~NO_FANOUT~
+Divisor[1] => ~NO_FANOUT~
+Divisor[2] => ~NO_FANOUT~
+Divisor[3] => ~NO_FANOUT~
+Divisor[4] => ~NO_FANOUT~
+Divisor[5] => ~NO_FANOUT~
+Divisor[6] => ~NO_FANOUT~
+Divisor[7] => ~NO_FANOUT~
+Remainder[0] <= Remainder[0].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[1] <= Remainder[1].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[2] <= Remainder[2].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[3] <= Remainder[3].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[4] <= Remainder[4].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[5] <= Remainder[5].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[6] <= Remainder[6].DB_MAX_OUTPUT_PORT_TYPE
+Remainder[7] <= Remainder[7].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Quotient[1] <= Quotient[1].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[2] <= Quotient[2].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[3] <= Quotient[3].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[4] <= Quotient[4].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[5] <= Quotient[5].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[6] <= Quotient[6].DB_MAX_OUTPUT_PORT_TYPE
+Quotient[7] <= Quotient[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
